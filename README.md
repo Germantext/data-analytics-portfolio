@@ -1,121 +1,89 @@
-# German Rojas — Data Analytics Portfolio
+# Germán Rojas — Customer Insights & CRM Data Analyst
 
-CRM & Marketing Data Analyst | Python · SQL · Power BI · HubSpot
+Analizo comportamiento de cliente para responder preguntas de negocio concretas. Quién está por cancelar, qué segmento genera más revenue, dónde se rompe el funnel.
 
-## Proyectos
+Vengo de la escritura y el análisis del discurso, y eso define cómo trabajo: el número es el punto de partida, no la conclusión. Lo que entrego es la explicación de por qué pasó y qué decisión se sigue de ahí.
 
-| Proyecto | Stack | Tema |
-|---|---|---|
-| mercadolibre_funnel_retention | SQL, Excel | Funnel de compra y retención por cohortes |
-| walmart_sales_analysis | Excel, KPIs | Eficiencia por departamento y dashboard |
-| financial_performance_sql | SQL, Excel | ROI y margen por mercado geográfico |
-| data_cleaning_sales_analysis | Excel | Limpieza y estandarización de datos de ventas |
-| mobility_economy_latam | Python, pandas | Movilidad urbana y productividad económica en Latam |
+**Stack:** Python (pandas) · SQL · Power BI · HubSpot · Excel avanzado
+**Enfoque:** churn y retención · análisis de funnels · segmentación de clientes · métricas de negocio · Voice of Customer
 
-## Contacto
-linkedin.com/in/german-rojas-data
+📍 Colombia · Disponible para trabajo remoto
+📧 german.rojas.serrano45@gmail.com
+🔗 [LinkedIn](https://www.linkedin.com/in/german-rojas-data/)
 
 ---
 
-## 📊 mercadolibre_funnel_retention
+## Proyectos con clientes reales
 
-**Problema de negocio:** ¿En qué etapa del embudo de compra se pierden más usuarios y cómo varía la retención por país y cohorte?
+### 🧵 Retención y comportamiento de compra — Boutique de moda femenina
+**Pregunta de negocio:** ¿Por qué las ventas no crecen si entran clientas nuevas todos los meses?
 
-**Stack:** SQL, Excel
+Reconstruí tres años de historial transaccional que vivían en dos sistemas que no se hablaban entre sí: un registro manual de ventas por redes sociales y un export de Shopify.
 
-**Periodo analizado:** Enero – Agosto 2025
+**Hallazgos clave**
+- El 83% de las clientas compra una sola vez y no vuelve. El negocio no tenía un problema de adquisición, tenía un problema de retención.
+- El 20% más fiel concentra cerca de la mitad de las ventas totales.
+- El canal mayorista deja aproximadamente la mitad del margen que el detal. No existía ninguna columna que distinguiera un canal del otro, así que inferí el segmento a partir de precio por prenda y costo de envío.
+- La caída de ventas que la dueña atribuía a un evento externo era en realidad un problema puntual de un mes en un solo canal.
 
-**Resultados clave:**
-- La conversión total del embudo (select_item → purchase) es de solo **1.25%**.
-- La fuga más grande ocurre en el primer paso: **de "ver producto" a "agregar al carrito" se pierde ~86% de los usuarios** (76.9% → 11%). Es el cuello de botella principal.
-- Por país, **Uruguay (4.55%), Bolivia (3.23%) y México (2.48%)** tienen la mejor conversión final; **Ecuador, Colombia y Paraguay convierten ~0%**.
-- Retención: D7 ~86%, D14 ~55%, D21 ~25%, **D28 cae a solo ~2.6%** — la mayoría de usuarios no vuelve después de 3 semanas.
-- Mejor retención D28 por país: Perú (3.2%) y México (3.1%). Peor: Colombia (1.6%) y Chile (1.7%).
+**Recomendación:** programa de fidelización segmentado por frecuencia de compra, y campaña específica de reactivación para el grupo de una sola compra, que es donde está el mayor volumen dormido.
 
-**Recomendaciones de negocio:**
-1. Priorizar la optimización de la ficha de producto y el botón "agregar al carrito" (mayor envío visible, reviews, política de devoluciones).
-2. Reducir fricción en checkout (autocompletado, menos pasos, reintento de pago sin perder carrito).
-3. Implementar reactivación temprana (D7–D21) vía recordatorios de carrito, alertas de precio y promociones segmentadas.
-4. Investigar fricciones locales en Ecuador, Colombia y Paraguay (pagos, logística, confianza).
+**Herramientas:** Python (pandas, rapidfuzz para deduplicación por similitud de texto), SQL, Excel, HTML + Chart.js
+📂 [Ver proyecto](#)
 
 ---
 
-## 📈 walmart_sales_analysis
+### 🏗️ Cartera, revenue y asignación de recursos — Empresa de ingeniería civil
+**Pregunta de negocio:** ¿Dónde está el dinero que la empresa facturó pero no ha cobrado, y en qué debería invertir su tiempo el fundador?
 
-**Problema de negocio:** ¿Qué departamentos son más y menos eficientes generando ventas por metro cuadrado, y dónde está la oportunidad de reasignar espacio?
+**Proceso:** 115 documentos en bruto (facturas, soportes, PDFs) depurados hasta 49 facturas electrónicas válidas y verificadas, con extracción de texto de PDF y limpieza por expresiones regulares. Diseñé una auditoría cruzada que detectó tres errores reales de extracción, incluido un archivo completo que se perdía por un problema de codificación de caracteres.
 
-**Stack:** Excel, tablas dinámicas, dashboard interactivo
+**Hallazgos clave**
+- El 39% de todo lo facturado estaba pendiente de cobro. El negocio no tenía dimensionado ese riesgo de liquidez.
+- El fundador concentraba tanto las actividades de bajo valor como las de alta rentabilidad, lo que limitaba la capacidad total del negocio.
 
-**Resultados clave:**
-- Los departamentos más eficientes por ventas/m² son **Despensa y Básicos, Comida Fresca y Hogar/Papel**.
-- Los menos eficientes: **Jardín y Vida al Aire Libre y Oficina/Escuela**.
-- **Despensa y Básicos** también lidera en participación sobre el total de ventas — es el mayor contribuyente al negocio.
-- Departamentos con baja participación Y baja eficiencia (Jardín, Oficina/Escuela) ocupan espacio sin retorno proporcional.
+**Recomendación:** delegar las actividades operativas de menor valor a personal nuevo para liberar al fundador hacia los servicios de mayor rentabilidad, que son los únicos que solo él puede ejecutar. La recomendación salió cuantificada, no como opinión.
 
-**Recomendación de negocio:**
-Priorizar inventario y presupuesto en Despensa, Comida Fresca y Hogar/Papel. Evaluar reducción de espacio o campañas de cross-selling en Jardín y Oficina/Escuela antes de recortar inversión.
-
-**Dashboard:** incluye filtro interactivo por departamento con KPIs de ventas/m² y % de participación.
+**Herramientas:** Python (pandas, regex), extracción de PDF, SQL, Excel (openpyxl), Power BI (modelo relacional de 4 páginas)
+📂 [Ver proyecto](#)
 
 ---
 
-## 💰 financial_performance_sql
+## Proyectos de análisis
 
-**Problema de negocio:** ¿Qué países generan mayor rentabilidad real (ROI) y dónde está mal asignado el presupuesto de marketing?
+### 📉 Churn y segmentación de clientes — ConnectaTel (telecomunicaciones)
+Consolidé tres fuentes de datos para construir un perfil de consumo por cliente y crucé cada segmento contra su tasa de cancelación.
 
-**Stack:** SQL, Excel
+- El segmento de alto uso es el más rentable y también el de mayor churn (14% frente a 11,65% general). Es decir, la empresa pierde justo a los clientes que más valen.
+- El comportamiento de consumo era casi idéntico entre el plan Básico y el Premium, lo que expone un problema de diseño de la oferta.
+- Corregí problemas críticos de calidad: 14% de registros de ciudad vacíos, valores centinela en edad y fechas de registro imposibles.
 
-**Resultados clave:**
-- **Estados Unidos** lidera en ingresos (3.35M), beneficio bruto (1.45M) y ROI (75.75%) — pero su gasto en campañas (1.92M) **supera su beneficio bruto**, lo que indica oportunidad de optimización incluso en el mejor mercado.
-- Los márgenes de ganancia son similares entre países (41%–45%), pero el **ROI varía drásticamente** (de 17% a 76%) — la diferencia está en cuánto se gasta en campañas vs. el tamaño real del mercado.
-- **Canadá, Francia, Alemania y Reino Unido** tienen márgenes saludables pero ROI bajo (17%–22%): gastan en campañas casi lo mismo que USA pero generan una fracción del retorno.
+**Herramientas:** Python (pandas, numpy, seaborn, matplotlib), detección de outliers por IQR
+📂 [Ver repositorio](https://github.com/Germantext/connectatel-customer-analysis)
 
-**Recomendación de negocio:**
-Reasignar presupuesto de marketing priorizando USA y Australia (mayor ROI), reduciendo gradualmente la inversión en Canadá, Francia, Alemania y Reino Unido hasta optimizar las campañas locales con mensajes adaptados culturalmente.
+### 🛒 Funnel de compra y retención por cohortes — E-commerce LATAM
+- Conversión total del funnel de 1,25%, con el 86% de la fuga concentrada en un solo paso, de ver el producto a agregarlo al carrito.
+- La retención cae de 86% en D7 a 2,6% en D28. La ventana crítica de abandono son tres semanas.
+- Mercados con conversión cercana a cero frente a otros con conversión hasta tres veces superior, lo que orienta dónde investigar fricciones locales de pago y logística.
 
----
-
-## 🧹 data_cleaning_sales_analysis
-
-**Problema de negocio:** El dataset original de ventas tenía inconsistencias (acentos rotos, nombres de ciudad sin estandarizar, productos sin categorizar) que impedían un análisis confiable.
-
-**Stack:** Excel
-
-**Proceso de limpieza:**
-- Estandarización de nombres de ciudad (`Ciudad_corregida`)
-- Separación de la columna "Producto" en Categoría, Tipo y Especificaciones (ej: "Tablet-Estándar-8GB" → Tablet | Estándar | 8GB)
-- Corrección de precios y montos totales
-- 0 duplicados detectados
-
-**Resultados clave (753 transacciones, Q4 2024):**
-- Ventas totales: **$2,944,620.61**
-- Ticket promedio: **$3,910.52**
-- Producto más vendido: **Tablet**
-- Ciudad con mayor volumen: **Monterrey**
-- Mes pico: **Octubre**
-
-**Recomendación de negocio:**
-Priorizar campañas promocionales e inventario de Tablets en Monterrey para el próximo trimestre.
-
-**Limitación:** se recomienda que el sistema de captura use campos de selección única (dropdown) para ciudad y producto, evitando irregularidades futuras en los datos.
+**Herramientas:** SQL, Excel, análisis de cohortes
+📂 [Ver repositorio](https://github.com/Germantext/data-analytics-portfolio)
 
 ---
 
-## 🚗 mobility_economy_latam
+## Formación
 
-**Problema de negocio:** ¿Existe relación entre la movilidad urbana (congestión vehicular) y la productividad económica (PIB per cápita) en ciudades de Latinoamérica, para priorizar inversión en infraestructura?
+- **Certificado Profesional en Data Analyst** — TripleTen (2026)
+- **GCI World 2026** — Matsuo-Iwasawa Laboratory, The University of Tokyo
+- **Inbound Marketing + Inbound Certification** — HubSpot Academy (vigentes)
+- **Licenciatura en Español y Literatura** — Universidad Industrial de Santander
 
-**Stack:** Python (pandas, seaborn, matplotlib)
+---
 
-**Cobertura:** 15 ciudades de 6 países latinoamericanos, año 2024 (TomTom Traffic Index + OECD Cities)
+## Cómo trabajo
 
-**Resultados clave:**
-- No existe una relación directa clara entre congestión y PIB per cápita.
-- **Ciudad de México** es un outlier: tiene la mayor congestión de toda la muestra con PIB moderado-bajo.
-- **Montevideo** tiene el PIB per cápita más alto y baja congestión.
-- **Bogotá** combina alta congestión (jams_delay ≈ 1,141) con PIB bajo (~USD 11,442) — patrón similar en Lima.
+Empiezo por la pregunta de negocio, no por el dataset. Antes de escribir una línea de código quiero saber qué decisión depende de la respuesta, porque eso determina qué vale la pena analizar y qué no.
 
-**Recomendación de negocio:**
-Priorizar Bogotá y Lima para inversión en infraestructura de transporte. Profundizar el análisis incorporando datos de densidad poblacional e infraestructura vial antes de asignar presupuesto.
+Documento las suposiciones y los casos borde. Cuando infiero algo que no está explícito en los datos, como separar mayoristas de clientas de detal sin una variable que lo indique, dejo escrito el criterio para que cualquiera pueda discutirlo.
 
-**Output:** `ladb_mobility_economy_2024_clean.csv`
+Entrego la conclusión en el lenguaje de quien decide. Un dashboard que nadie entiende no cambió nada.
