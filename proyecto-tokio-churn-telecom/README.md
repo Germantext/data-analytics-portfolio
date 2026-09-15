@@ -32,5 +32,5 @@ Implementar el modelo como herramienta mensual de priorización dentro del proce
 
 El AUC-ROC de 0,6677 indica poder predictivo moderado. El retorno de inversión proyectado (424%) es una estimación pendiente de validación empírica, no un resultado comprobado. El modelo identifica asociaciones, no causalidad.
 
-📄 [Ver propuesta ejecutiva (PDF)](#)
-📓 [Ver notebook técnico](#)
+📄 [Ver propuesta ejecutiva (PDF)](proyecto-tokio-churn-telecom_pdf.pdf)
+📓 [Ver notebook técnico](proyecto-tokio-churn-telecom.ipynb)
