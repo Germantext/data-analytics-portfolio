@@ -27,4 +27,4 @@ Excel avanzado, con tablas dinámicas, dashboard interactivo con selector de dep
 
 Priorizar presupuesto e inventario en los departamentos de mayor eficiencia por metro cuadrado, en particular Despensa y Básicos. Evaluar una reducción de espacio o una estrategia específica de promoción para los departamentos de baja eficiencia y baja participación, antes de recortarlos directamente.
 
-📊 [Ver archivo de análisis](walmart_sales_analysis.xlsx)
+📊 [Ver archivo de análisis](Ejecutivo%20de%20Ventas%20Walmart.xlsx)
