@@ -21,4 +21,9 @@ Python (pandas, extracción y validación de texto), Excel para entregables inte
 ## Resultados
 
 - Una porción relevante de los documentos recibidos no correspondía al negocio en absoluto y se excluyó por completo.
-- Una parte considerable de lo ya facturado seguía sin cobrarse, y esa
+- Una parte considerable de lo ya facturado seguía sin cobrarse, y esa cartera estaba concentrada mayormente en un solo cliente, que además seguía recibiendo trabajo nuevo mes tras mes sin haber pagado nada de lo anterior.
+- Al comparar los dos tipos de servicio que más ofrecía, uno rendía notablemente más por día de trabajo que el otro, lo que abrió una pregunta real sobre cómo estaba distribuyendo su tiempo.
+
+## Recomendaciones
+
+Tablero que uniera ambos sistemas de registro para tener un número de ingreso real, no dos números parciales. Señalar la concentración de cartera como un riesgo a monitorear, no como una alarma inmediata, respetando cómo funcionan las relaciones comerciales en su entorno. Delegar el servicio de menor rendimiento por día a una persona en formación, mostrando que el costo de esa contratación se recupera en un margen corto de días de trabajo del servicio de mayor valor.
