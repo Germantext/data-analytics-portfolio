@@ -21,3 +21,5 @@ SQL, Excel, análisis de cohortes.
 ## Recomendaciones
 
 Priorizar la optimización del paso "ver producto → agregar al carrito" antes que cualquier otra mejora del funnel, e investigar las fricciones locales de pago y logística en los mercados de conversión más baja.
+
+📊 [Ver archivo de análisis](mercadolibre_funnel_retention_clean.xlsx)
