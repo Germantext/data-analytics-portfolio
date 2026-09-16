@@ -14,7 +14,7 @@ Consolidé ingresos, costos y gasto de campañas por país, y calculé dos métr
 
 ## Herramientas
 
-SQL para la extracción y el cálculo de métricas por país, Excel para el dashboard final.
+Excel, con fórmulas de cálculo por país y tabla comparativa de márgenes y ROI.
 
 ## Resultados
 
@@ -24,6 +24,6 @@ SQL para la extracción y el cálculo de métricas por país, Excel para el dash
 
 ## Recomendaciones
 
-Reasignar presupuesto de marketing priorizando Estados Unidos y Australia, que tienen el mejor retorno, y reducir la inversión en Canadá, Francia, Alemania y Reino Unido hasta rediseñar campañas más eficientes para esos mercados. Definir metas de mejora de ROI por trimestre en vez de solo monitorear el margen de ganancia.
+Reasignar presupuesto de marketing priorizando Estados Unidos y Australia, que tienen el mejor retorno, y reducir la inversión en Canadá, Francia, Alemania y Reino Unido hasta rediseñar campañas con un gasto proporcional al tamaño real de esos mercados. Definir metas de mejora de ROI por trimestre en vez de solo monitorear el margen de ganancia.
 
 📊 [Ver archivo de análisis](financial_performance_sql.xlsx)
