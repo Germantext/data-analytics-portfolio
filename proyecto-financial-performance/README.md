@@ -26,4 +26,4 @@ Excel, con fórmulas de cálculo por país y tabla comparativa de márgenes y RO
 
 Reasignar presupuesto de marketing priorizando Estados Unidos y Australia, que tienen el mejor retorno, y reducir la inversión en Canadá, Francia, Alemania y Reino Unido hasta rediseñar campañas con un gasto proporcional al tamaño real de esos mercados. Definir metas de mejora de ROI por trimestre en vez de solo monitorear el margen de ganancia.
 
-📊 [Ver archivo de análisis](financial_performance_sql.xlsx)
+📊 [Ver archivo de análisis](financial_performance_clean.xlsx)
