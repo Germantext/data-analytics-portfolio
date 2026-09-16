@@ -20,7 +20,7 @@ Vengo de la escritura y el análisis del discurso, y eso define cómo trabajo: e
 ### 🧵 Retención y comportamiento de compra — Marca de moda femenina independiente
 Reconstruí el historial transaccional completo cruzando dos sistemas que nunca se comunicaban entre sí, para entender por qué las ventas no crecían pese a la entrada constante de clientas nuevas.
 
-- La gran mayoría de las clientas compra una sola vez y no vuelve. El negocio no tenía un problema de adquisición, tenía un problema de retención.
+- La gran mayoría de las clientas compra una sola vez y desaparece del negocio para siempre, un patrón que apuntaba directo a un problema de retención.
 - Un grupo reducido de clientas recurrentes concentra una parte desproporcionadamente alta de la facturación total.
 - La caída de ventas que la dueña atribuía a un evento externo no se sostuvo con los datos.
 
@@ -39,7 +39,7 @@ Diseñé un modelo de datos relacional para cruzar dos sistemas de registro que 
 ### 🛋️ Conversión de cotizaciones y estado real del pipeline — Negocio de diseño de interiores
 Auditoría de calidad sobre un archivo de cotizaciones sin ningún sistema formal de seguimiento, antes de calcular cualquier métrica de conversión.
 
-- El esfuerzo comercial estaba desalineado con el resultado económico, la línea más cotizada era la que menos se convertía en venta.
+- El esfuerzo comercial estaba desalineado con el resultado económico, la línea más cotizada resultó ser la que menos convertía en venta.
 - Los ingresos estaban concentrados en muy pocos clientes, con dos lógicas de negocio distintas entre sí.
 
 **Herramientas:** Python (pandas, openpyxl), HTML y CSS
@@ -52,8 +52,8 @@ Auditoría de calidad sobre un archivo de cotizaciones sin ningún sistema forma
 ### 🛵 RappiPlus — de datos a decisiones de negocio
 Proyecto insignia aplicado en seis pasos, calidad de datos, rentabilidad, funnel de conversión, retención por cohortes, test A/B y dashboard ejecutivo en Power BI.
 
-- Un outlier en una sola orden inflaba el revenue total y cambiaba cuál producto aparecía como el más vendido, antes de excluirlo del cálculo.
-- El test A/B del checkout no mostró significancia estadística, y se reportó así en vez de forzar una lectura positiva.
+- Un outlier en una sola orden inflaba el revenue total y cambiaba qué producto aparecía como el más vendido, hasta excluirlo del cálculo.
+- El test A/B del checkout no alcanzó significancia estadística, y así quedó reportado, sin forzar una lectura favorable.
 - Auditoría cruzada entre el análisis en Python y el dashboard en Power BI, con dos errores reales de cálculo detectados y corregidos antes de entregar.
 
 **Herramientas:** Python (pandas, matplotlib/seaborn), SQL, prueba de proporciones, Power BI
@@ -63,8 +63,8 @@ Proyecto insignia aplicado en seis pasos, calidad de datos, rentabilidad, funnel
 Modelo de clasificación para priorizar clientes en riesgo de cancelación, con propuesta de negocio cuantificada.
 
 - Tasa de abandono de 49,6% en ventana de 31 a 60 días, con 34,4 millones de dólares en ingresos anuales en riesgo.
-- Random Forest (AUC 0,6677) seleccionado como herramienta de priorización, no como predictor definitivo.
-- Retorno de inversión proyectado (424%) reportado explícitamente como estimación pendiente de validar con un piloto, no como resultado comprobado.
+- Random Forest (AUC 0,6677) funciona como herramienta de priorización de clientes, útil para ordenar a quién contactar primero, sin pretender adivinar con certeza quién cancelará.
+- El retorno de inversión proyectado, 424%, quedó reportado como estimación pendiente de validar con un piloto.
 
 **Herramientas:** Python (pandas, scikit-learn), Random Forest, regresión logística
 📂 [Ver proyecto](proyecto-tokio-churn-telecom)
@@ -72,7 +72,7 @@ Modelo de clasificación para priorizar clientes en riesgo de cancelación, con 
 ### 📉 Churn y segmentación de clientes — ConnectaTel (telecomunicaciones)
 Consolidación de tres fuentes de datos para cruzar perfil de consumo contra tasa de cancelación.
 
-- El segmento de alto uso es el más rentable y también el de mayor churn, la empresa pierde justo a los clientes que más valen.
+- El segmento de alto uso resultó ser el más rentable y también el de mayor churn, justo el que más le costaba perder a la empresa.
 - El comportamiento de consumo era casi idéntico entre el plan Básico y el Premium, lo que expone un problema de diseño de la oferta.
 
 **Herramientas:** Python (pandas, numpy, seaborn, matplotlib), detección de outliers por IQR
@@ -82,7 +82,7 @@ Consolidación de tres fuentes de datos para cruzar perfil de consumo contra tas
 Comparación de margen de ganancia contra retorno de marketing por país, dos métricas que pueden dar señales opuestas.
 
 - Estados Unidos y Australia concentran el mejor retorno de marketing.
-- Canadá, Francia, Alemania y Reino Unido tienen buen margen pero bajo ROI, porque gastan en campañas montos similares a mercados mucho más grandes.
+- Canadá, Francia, Alemania y Reino Unido mantienen buen margen, pero con un ROI bajo, producto de gastar en campañas montos similares a los de mercados mucho más grandes.
 
 **Herramientas:** Excel, con fórmulas de cálculo por país y tabla comparativa de márgenes y ROI
 📂 [Ver proyecto](proyecto-financial-performance)
@@ -90,22 +90,22 @@ Comparación de margen de ganancia contra retorno de marketing por país, dos m�
 ### 🛒 Eficiencia de ventas por departamento — Retail Walmart
 Ventas por metro cuadrado y participación por departamento, para decidir dónde priorizar espacio e inventario.
 
-- Despensa y Básicos es el departamento más eficiente por metro cuadrado y el que más aporta al total de ventas.
-- Jardín y Vida al Aire Libre tiene la eficiencia más baja, ocupando espacio que podría rendir más en otra categoría.
+- Despensa y Básicos lidera en eficiencia por metro cuadrado y en aporte al total de ventas.
+- Jardín y Vida al Aire Libre ocupa espacio de tienda que podría rendir más en otra categoría.
 
 **Herramientas:** Excel avanzado, tablas dinámicas, dashboard interactivo
 📂 [Ver proyecto](proyecto-walmart-eficiencia-retail)
 
 ### 🛍️ Funnel de compra y retención por cohortes — E-commerce LATAM
-- Conversión total del funnel de 1,25%, con el 86% de la fuga concentrada en un solo paso, de ver el producto a agregarlo al carrito.
-- La retención cae de 86% en D7 a 2,6% en D28. La ventana crítica de abandono son tres semanas.
+- Conversión total del funnel de 1,25%, con el 86% de la fuga concentrada en el paso de ver el producto a agregarlo al carrito.
+- La retención cae de 86% en D7 a 2,6% en D28, una ventana crítica de apenas tres semanas.
 
 **Herramientas:** SQL, Excel, análisis de cohortes
 📂 [Ver proyecto](proyecto-funnel-ecommerce-latam)
 
 ### 🧪 Experimento A/B en página de inicio
 - La página B generó mayor gasto promedio por usuario convertido y mayor tasa de conversión, ambas diferencias estadísticamente significativas.
-- La fuente de tráfico y el tipo de usuario no mostraron impacto relevante sobre el resultado.
+- La fuente de tráfico y el tipo de usuario resultaron irrelevantes para explicar el resultado.
 
 **Herramientas:** Python (pandas, scipy, statsmodels), pruebas de hipótesis
 📂 [Ver proyecto](proyecto-ab-test-landing)
@@ -127,4 +127,4 @@ Empiezo por la pregunta de negocio, no por el dataset. Antes de escribir una lí
 
 Documento las suposiciones y los casos borde. Cuando infiero algo que no está explícito en los datos, dejo escrito el criterio para que cualquiera pueda discutirlo.
 
-Entrego la conclusión en el lenguaje de quien decide. Creo usando la narrativa. 
+Entrego la conclusión en el lenguaje de quien decide, siguiendo la misma estructura de causa y consecuencia con la que fui formado para leer un texto.
