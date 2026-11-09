@@ -63,6 +63,14 @@ Proyecto insignia aplicado en seis pasos, calidad de datos, rentabilidad, funnel
 
 Ver proyecto: [proyecto-rappiplus](proyecto-rappiplus)
 
+### Embudo de ventas B2B, dónde se gana y dónde se pierde
+- La tasa de cierre es casi igual en todos los segmentos, cerca del 63%, y los ingresos dependen de qué productos vende el equipo. Tres productos suman el 83,5% del dinero.
+- El 81% del pipeline abierto supera el ciclo de venta más largo observado, lo que infla más de cinco veces el valor esperado.
+
+**Herramientas:** SQL (SQLite), Python (pandas, Matplotlib)
+
+Ver proyecto: [proyecto-embudo-ventas-b2b](proyecto-embudo-ventas-b2b)
+
 ### Churn Prediction & Retention Strategy — Telecomunicaciones (dataset educativo, GCI World, Universidad de Tokio)
 Modelo de clasificación para priorizar clientes en riesgo de cancelación, con propuesta de negocio cuantificada.
 
